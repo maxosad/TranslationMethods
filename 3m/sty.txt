@@ -1,0 +1,17 @@
+
+<style>
+	.type {
+     color: blue;
+    }
+    .blue {
+     color: blue;
+    }
+    .num {
+     color: pink;
+    }
+    .block {
+     position: relative;
+     left: 1em;
+    }
+     
+</style>

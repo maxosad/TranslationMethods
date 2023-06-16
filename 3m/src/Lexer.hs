@@ -511,184 +511,200 @@ alexGetByte (_,[],(c:s)) = case utf8Encode c of
 alex_tab_size :: Int
 alex_tab_size = 8
 alex_base :: Array Int Int
-alex_base = listArray (0 :: Int, 36)
+alex_base = listArray (0 :: Int, 51)
   [ -8
   , -95
   , -94
-  , -53
-  , -92
-  , -107
-  , -104
-  , -103
-  , -91
   , -93
-  , -97
-  , -100
-  , 0
-  , 0
-  , 0
-  , 0
-  , 0
-  , 0
-  , 0
-  , 0
-  , 0
-  , -44
-  , -43
-  , 0
-  , 0
-  , 0
-  , 0
-  , 0
-  , 0
-  , 69
-  , -42
-  , -77
+  , -92
+  , -51
+  , -91
+  , -104
+  , -105
+  , -102
+  , -90
+  , -101
+  , -99
+  , -89
+  , -96
   , -88
   , -87
+  , -84
   , -86
-  , -80
+  , 0
+  , 0
+  , 0
+  , 0
+  , 0
+  , 0
+  , 0
+  , 0
+  , 0
+  , 0
+  , 0
+  , 0
+  , 0
+  , 0
+  , -40
+  , 70
+  , -75
+  , -74
+  , -69
+  , -73
+  , -85
+  , -72
+  , 26
+  , 0
+  , 0
+  , 0
+  , 0
+  , -23
+  , -11
+  , 0
+  , 0
+  , 0
   , 0
   ]
 
 alex_table :: Array Int Int
-alex_table = listArray (0 :: Int, 324)
+alex_table = listArray (0 :: Int, 325)
   [ 0
-  , 12
-  , 12
-  , 12
-  , 12
-  , 12
   , 19
-  , 20
-  , 26
-  , 28
-  , 1
+  , 19
+  , 19
+  , 19
+  , 19
+  , 31
+  , 43
+  , 44
+  , 45
+  , 51
   , 2
-  , 4
-  , 11
-  , 10
-  , 6
-  , 36
-  , 24
-  , 23
-  , 25
-  , 9
-  , 7
-  , 27
-  , 0
-  , 12
   , 3
-  , 8
-  , 0
-  , 5
-  , 0
+  , 4
   , 17
-  , 0
-  , 0
-  , 0
   , 15
-  , 13
-  , 0
   , 14
-  , 0
+  , 11
   , 16
-  , 29
-  , 29
-  , 29
-  , 29
-  , 29
-  , 29
-  , 29
-  , 29
-  , 29
-  , 29
-  , 0
-  , 0
-  , 22
+  , 9
+  , 1
+  , 50
+  , 6
+  , 32
+  , 19
+  , 5
   , 30
+  , 12
+  , 13
+  , 8
+  , 29
+  , 10
+  , 23
+  , 24
+  , 27
+  , 25
+  , 7
+  , 26
+  , 49
+  , 28
+  , 34
+  , 34
+  , 34
+  , 34
+  , 34
+  , 34
+  , 34
+  , 34
+  , 34
+  , 34
+  , 48
+  , 20
+  , 47
+  , 33
+  , 46
+  , 0
+  , 0
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 39
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 37
+  , 0
+  , 0
+  , 0
+  , 0
+  , 0
+  , 0
+  , 37
+  , 37
+  , 37
+  , 37
+  , 40
+  , 37
+  , 37
+  , 37
+  , 41
+  , 37
+  , 37
+  , 37
+  , 35
+  , 37
+  , 37
+  , 37
+  , 37
+  , 36
+  , 37
+  , 37
+  , 37
+  , 37
+  , 38
+  , 37
+  , 37
+  , 37
   , 21
   , 0
-  , 0
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
+  , 22
   , 34
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
+  , 34
+  , 34
+  , 34
+  , 34
+  , 34
+  , 34
+  , 34
+  , 34
+  , 34
+  , 42
   , 0
   , 0
   , 0
   , 0
   , 0
   , 0
-  , 31
-  , 31
-  , 31
-  , 31
-  , 33
-  , 31
-  , 31
-  , 31
-  , 35
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 32
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
-  , 31
   , 0
   , 18
-  , 29
-  , 29
-  , 29
-  , 29
-  , 29
-  , 29
-  , 29
-  , 29
-  , 29
-  , 29
-  , 0
-  , 0
-  , 0
-  , 0
-  , 0
-  , 0
-  , 0
-  , 0
-  , 0
   , 0
   , 0
   , 0
@@ -881,7 +897,7 @@ alex_table = listArray (0 :: Int, 324)
   ]
 
 alex_check :: Array Int Int
-alex_check = listArray (0 :: Int, 324)
+alex_check = listArray (0 :: Int, 325)
   [ -1
   , 9
   , 10
@@ -890,37 +906,37 @@ alex_check = listArray (0 :: Int, 324)
   , 13
   , 101
   , 101
-  , 61
   , 101
+  , 101
+  , 61
+  , 115
   , 117
   , 115
-  , 115
-  , 110
   , 105
-  , 108
+  , 105
+  , 117
   , 116
-  , 61
-  , 61
+  , 114
+  , 108
+  , 108
   , 61
   , 97
-  , 108
-  , 102
-  , -1
+  , 110
   , 32
   , 33
+  , 110
+  , 101
+  , 97
   , 114
-  , -1
-  , 114
-  , -1
-  , 38
-  , -1
-  , -1
-  , -1
+  , 116
+  , 104
+  , 40
+  , 41
   , 42
   , 43
-  , -1
+  , 108
   , 45
-  , -1
+  , 61
   , 47
   , 48
   , 49
@@ -932,8 +948,8 @@ alex_check = listArray (0 :: Int, 324)
   , 55
   , 56
   , 57
-  , -1
-  , -1
+  , 61
+  , 59
   , 60
   , 61
   , 62
@@ -997,8 +1013,9 @@ alex_check = listArray (0 :: Int, 324)
   , 120
   , 121
   , 122
+  , 123
   , -1
-  , 124
+  , 125
   , 48
   , 49
   , 50
@@ -1009,6 +1026,7 @@ alex_check = listArray (0 :: Int, 324)
   , 55
   , 56
   , 57
+  , 102
   , -1
   , -1
   , -1
@@ -1016,8 +1034,7 @@ alex_check = listArray (0 :: Int, 324)
   , -1
   , -1
   , -1
-  , -1
-  , -1
+  , 110
   , -1
   , -1
   , -1
@@ -1210,7 +1227,7 @@ alex_check = listArray (0 :: Int, 324)
   ]
 
 alex_deflt :: Array Int Int
-alex_deflt = listArray (0 :: Int, 36)
+alex_deflt = listArray (0 :: Int, 51)
   [ -1
   , -1
   , -1
@@ -1248,9 +1265,24 @@ alex_deflt = listArray (0 :: Int, 36)
   , -1
   , -1
   , -1
+  , -1
+  , -1
+  , -1
+  , -1
+  , -1
+  , -1
+  , -1
+  , -1
+  , -1
+  , -1
+  , -1
+  , -1
+  , -1
+  , -1
+  , -1
   ]
 
-alex_accept = listArray (0 :: Int, 36)
+alex_accept = listArray (0 :: Int, 51)
   [ AlexAccNone
   , AlexAccNone
   , AlexAccNone
@@ -1263,7 +1295,22 @@ alex_accept = listArray (0 :: Int, 36)
   , AlexAccNone
   , AlexAccNone
   , AlexAccNone
+  , AlexAccNone
+  , AlexAccNone
+  , AlexAccNone
+  , AlexAccNone
+  , AlexAccNone
+  , AlexAccNone
+  , AlexAccNone
   , AlexAccSkip
+  , AlexAcc 31
+  , AlexAcc 30
+  , AlexAcc 29
+  , AlexAcc 28
+  , AlexAcc 27
+  , AlexAcc 26
+  , AlexAcc 25
+  , AlexAcc 24
   , AlexAcc 23
   , AlexAcc 22
   , AlexAcc 21
@@ -1290,42 +1337,59 @@ alex_accept = listArray (0 :: Int, 36)
   , AlexAcc 0
   ]
 
-alex_actions = array (0 :: Int, 24)
-  [ (23,alex_action_1)
-  , (22,alex_action_2)
-  , (21,alex_action_3)
-  , (20,alex_action_4)
-  , (19,alex_action_5)
-  , (18,alex_action_6)
-  , (17,alex_action_7)
-  , (16,alex_action_8)
-  , (15,alex_action_9)
-  , (14,alex_action_10)
-  , (13,alex_action_11)
-  , (12,alex_action_12)
-  , (11,alex_action_13)
-  , (10,alex_action_14)
-  , (9,alex_action_15)
-  , (8,alex_action_16)
-  , (7,alex_action_17)
-  , (6,alex_action_18)
-  , (5,alex_action_19)
-  , (4,alex_action_19)
-  , (3,alex_action_19)
-  , (2,alex_action_19)
-  , (1,alex_action_19)
-  , (0,alex_action_20)
+alex_actions = array (0 :: Int, 32)
+  [ (31,alex_action_1)
+  , (30,alex_action_2)
+  , (29,alex_action_3)
+  , (28,alex_action_4)
+  , (27,alex_action_5)
+  , (26,alex_action_6)
+  , (25,alex_action_7)
+  , (24,alex_action_8)
+  , (23,alex_action_9)
+  , (22,alex_action_10)
+  , (21,alex_action_11)
+  , (20,alex_action_12)
+  , (19,alex_action_13)
+  , (18,alex_action_14)
+  , (17,alex_action_15)
+  , (16,alex_action_16)
+  , (15,alex_action_16)
+  , (14,alex_action_16)
+  , (13,alex_action_16)
+  , (12,alex_action_16)
+  , (11,alex_action_16)
+  , (10,alex_action_16)
+  , (9,alex_action_17)
+  , (8,alex_action_18)
+  , (7,alex_action_19)
+  , (6,alex_action_20)
+  , (5,alex_action_21)
+  , (4,alex_action_22)
+  , (3,alex_action_23)
+  , (2,alex_action_24)
+  , (1,alex_action_25)
+  , (0,alex_action_26)
   ]
 
-{-# LINE 37 "Lexer.x" #-}
+{-# LINE 45 "Lexer.x" #-}
 
-data Token = TPlus 
-           | TMinus 
-           | TMul 
-           | TDiv 
-           | TConst Int 
-           | TAnd
-           | TOr
+data Token = TPlus
+           | TMinus
+           | TMul
+           | TDiv
+           | TInt
+           | TMain
+           | TWhile
+           | TReturn
+           | TOP
+           | TCP
+           | TOF
+           | TCF
+           | TEOL
+           | TEq
+           | TIF
+           | TELSE
            | TTrue
            | TFalse
            | TG
@@ -1334,34 +1398,36 @@ data Token = TPlus
            | TGE
            | TEQ
            | TNEQ
-           | TIF
-           | TELSE
-           | TNONE
+           | TConst Int
            | TVar String
-           | TAssign
-           | TPrint
            deriving (Eq, Show)
 
-alex_action_1 =  \s -> TPlus    
-alex_action_2 =  \s -> TMinus   
-alex_action_3 =  \s -> TMul     
-alex_action_4 =  \s -> TDiv     
-alex_action_5 =  \s -> TAnd     
-alex_action_6 =  \s -> TOr      
-alex_action_7 =  \s -> TTrue    
-alex_action_8 =  \s -> TFalse   
-alex_action_9 =  \s -> TG       
-alex_action_10 =  \s -> TL       
-alex_action_11 =  \s -> TLE       
-alex_action_12 =  \s -> TGE       
-alex_action_13 =  \s -> TEQ       
-alex_action_14 =  \s -> TNEQ      
-alex_action_15 =   \s -> TIF       
-alex_action_16 =   \s -> TELSE     
-alex_action_17 =   \s -> TConst (read s) 
-alex_action_18 =  \s -> TAssign   
-alex_action_19 =  \s -> TVar s 
-alex_action_20 =  \s -> TPrint 
+alex_action_1 =  \s -> TEOL    
+alex_action_2 =  \s -> TOF    
+alex_action_3 =  \s -> TCF    
+alex_action_4 =  \s -> TOP    
+alex_action_5 =  \s -> TCP    
+alex_action_6 =  \s -> TPlus    
+alex_action_7 =  \s -> TMinus   
+alex_action_8 =  \s -> TMul     
+alex_action_9 =  \s -> TDiv     
+alex_action_10 =  \s -> TInt     
+alex_action_11 =  \s -> TMain     
+alex_action_12 =  \s -> TWhile     
+alex_action_13 =  \s -> TReturn     
+alex_action_14 =  \s -> TEq 
+alex_action_15 =  \s -> TConst (read s) 
+alex_action_16 =  \s -> TVar s 
+alex_action_17 =   \s -> TIF       
+alex_action_18 =   \s -> TELSE     
+alex_action_19 =  \s -> TTrue    
+alex_action_20 =  \s -> TFalse   
+alex_action_21 =  \s -> TG       
+alex_action_22 =  \s -> TL       
+alex_action_23 =  \s -> TLE       
+alex_action_24 =  \s -> TGE       
+alex_action_25 =  \s -> TEQ       
+alex_action_26 =  \s -> TNEQ      
 {-# LINE 1 "templates/GenericTemplate.hs" #-}
 -- -----------------------------------------------------------------------------
 -- ALEX TEMPLATE

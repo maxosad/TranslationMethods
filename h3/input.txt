@@ -1,1 +1,0 @@
-if > 1 2 = a 5 else if < 3 5 print * 100 500 else print b
