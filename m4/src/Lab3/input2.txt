@@ -1,0 +1,1 @@
+int main() {int a; a = 1; int a; a = 1; int a = 2 + 2 - 1; while ( True) {int a; a = 2; if (False) {int a; a = 1;} else {int a; a = 2;}}  }    

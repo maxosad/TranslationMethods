@@ -1,0 +1,7 @@
+data Expr = Val String | Eval Expr Rep 
+  deriving (Eq, Show)
+data Rep = Cont Chast Rep | End Chast
+  deriving (Eq, Show)
+data Chast = Add Expr | Sub Expr | Mult Expr | Divi Expr 
+  deriving (Eq, Show)
+  

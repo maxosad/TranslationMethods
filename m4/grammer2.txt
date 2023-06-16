@@ -1,0 +1,7 @@
+Expr = Term Rep {Eval $1 $2} | Term {$1}; 
+Term = Factor Re {Eval $1 $2} | Factor {$1}; 
+Factor = #(# Expr #)# {$2} | Num {$1} ; 
+Num = #1# {Val $1} | #2# {Val $1};
+Rep = + Term Rep {Cont (Add $2) $3} | - Term Rep {Cont (Sub $2) $3} | + Term {End (Add $2)}| - Term {End (Sub $2)};
+Re = * Factor Re {Cont (Mult $2) $3} | / Factor Re {Cont (Divi $2) $3} | * Factor {End (Mult $2)}| / Factor {End (Divi $2)};
+

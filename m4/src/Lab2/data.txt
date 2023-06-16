@@ -1,0 +1,6 @@
+data Primintive a = Choise a a | Klin a | Add a a
+  deriving (Eq, Show)
+  
+
+data Expr = Val String | Op (Primintive Expr) 
+  deriving (Eq, Show)

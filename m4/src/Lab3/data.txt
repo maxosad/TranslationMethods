@@ -1,0 +1,50 @@
+data Text = Line Str 
+          | Lines Str Text
+          | LineIf IfExpr 
+          | LinesIf IfExpr Text
+          | LineWhile WhileExpr
+          | LinesWhile WhileExpr Text
+          | LineFor ForExpr
+          | LinesFor ForExpr Text
+  deriving (Eq)
+
+
+data Block = Blck Text deriving (Eq)
+ 
+data Str = Assign String Expr 
+         | Declar String 
+         | Set String Expr
+         | Return Expr
+  deriving (Eq)
+
+data Root = RootBlock Block
+  deriving (Eq)
+
+data LogicExpr = BoolValue String 
+               | Less Expr Expr
+               | Greater Expr Expr
+               | Greatereq Expr Expr
+               | Lesseq Expr Expr
+               | Eq Expr Expr
+               | Noteq Expr Expr
+               deriving (Eq)
+
+data IfExpr = IfExpr LogicExpr Block
+            | IfElExpr LogicExpr Block Block
+  deriving (Eq)
+
+data WhileExpr = WhileExpr LogicExpr Block
+  deriving (Eq)
+
+
+data ForExpr = ForExpr String Expr LogicExpr String Block
+  deriving (Eq)
+
+
+data Expr = Var String | Val String | Eval Expr Rep 
+  deriving (Eq)
+data Rep = Cont Chast Rep | End Chast
+  deriving (Eq)
+data Chast = Add Expr | Sub Expr | Mult Expr | Divi Expr 
+  deriving (Eq)
+  

@@ -1,0 +1,14 @@
+Root = #int# #main# #(# #)# Block  {RootBlock $5};
+Block =  #{# Text #}# {Blck $2};
+Text = Str #;# Text {Lines $1 $3}| Str #;#  {Line $1}| Iff Text  {LinesIf $1 $2} | Iff  {LineIf $1 }  | While Text  {LinesWhile $1 $2}| While  {LineWhile $1 } ;
+While = #while# #(# Logic #)# Block {WhileExpr $3 $5};
+Str = #int# #a# #=# Expr {Assign $2 $4} | #int# #a# {Declar $2} | #a# #=# Expr {Set $1 $3} | #return# Expr {Return $2};
+Iff = #if# #(# Logic #)# Block #else# Block { IfElExpr $3 $5 $7 } | #if# #(# Logic #)# Block    { IfExpr $3 $5  };
+Logic =  LogicUnary  { $1 }	;
+LogicUnary = #True#  { BoolValue $1 } | #False#   { BoolValue $1 };
+Expr = Term Rep {Eval $1 $2} | Term {$1}; 
+Term = Factor Re {Eval $1 $2} | Factor {$1}; 
+Factor = #(# Expr #)# {$2} | Unary {$1} ; 
+Unary = #1# {Val $1} | #2# {Val $1} | #a# { Var   $1 };
+Rep = + Term Rep {Cont (Add $2) $3} | - Term Rep {Cont (Sub $2) $3} | + Term {End (Add $2)}| - Term {End (Sub $2)};
+Re = * Factor Re {Cont (Mult $2) $3} | / Factor Re {Cont (Divi $2) $3} | * Factor {End (Mult $2)}| / Factor {End (Divi $2)};
